@@ -31,6 +31,11 @@ const certifications = [
     name: 'AWS – Cloud Architecting',
     url: 'https://www.credly.com/badges/aa5a4601-981d-49cb-a50e-5ac4c105d70b/public_url',
     category: 'AWS'
+  },
+  {
+    name: 'CISCO – Cybersecurity Essentials',
+    url: 'https://www.credly.com/badges/7bd1fe34-bf15-45d5-9209-8a644ecca771/linked_in?t=t18bzu',
+    category: 'CISCO'
   }
 ]
 

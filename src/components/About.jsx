@@ -25,6 +25,11 @@ export function About({ id, setActive }) {
             También tengo experiencia en backend y APIs RESTful con Node.js, integrando bases de datos y aplicando arquitecturas modernas (MVC, MVVM).
             Me apasiona transformar ideas en productos digitales usables y atractivos, desde el diseño hasta la implementación de un MVP validable en el mercado.
           </p>
+          <div className="mt-4">
+            <p className="text-white/80 text-sm">
+              • Egresado de la Universidad Politécnica en la carrera de Ingeniería de Software (2022-2025)
+            </p>
+          </div>
         </Motion.div>
         <Motion.div
           initial={{ opacity: 0, x: 30 }}
