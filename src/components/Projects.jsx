@@ -103,16 +103,24 @@ export function Projects({ id, setActive }) {
               <p className="text-sm text-[rgb(var(--fg))]/80 italic">{c.contribution}</p>
               
               {c.awards && (
-                <div className="space-y-1">
-                  {c.awards.map((a) => (
-                    <p key={a} className="text-sm font-medium text-yellow-400">{a}</p>
-                  ))}
+                <div className="mt-1">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-[rgb(var(--fg))]/35 mb-2">
+                    Reconocimientos
+                  </p>
+                  <div className="space-y-1.5">
+                    {c.awards.map((a) => (
+                      <div key={a} className="flex items-center gap-3">
+                        <div className="h-px w-4 bg-amber-400/60 flex-shrink-0" />
+                        <span className="text-xs text-amber-300/90 font-medium tracking-wide">{a}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
               <div className="flex flex-wrap gap-2">
                 {c.tech.map((t) => (
-                  <span key={t} className="text-xs px-2 py-1 rounded bg-white/10 border border-white/10">
+                  <span key={t} className="text-xs px-2 py-1 rounded bg-[rgb(var(--surface))]/10 border border-[rgb(var(--surface))]/10">
                     {t}
                   </span>
                 ))}
@@ -164,13 +172,13 @@ export function Projects({ id, setActive }) {
                     <>
                       <button
                         onClick={() => prevImage(i, c.images)}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-all"
+                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[rgb(var(--bg))]/70 text-[rgb(var(--fg))] hover:bg-[rgb(var(--bg))]/90 border border-[rgb(var(--surface))]/10 transition-all"
                       >
                         <FaChevronLeft className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => nextImage(i, c.images)}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-all"
+                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[rgb(var(--bg))]/70 text-[rgb(var(--fg))] hover:bg-[rgb(var(--bg))]/90 border border-[rgb(var(--surface))]/10 transition-all"
                       >
                         <FaChevronRight className="w-4 h-4" />
                       </button>
@@ -190,8 +198,8 @@ export function Projects({ id, setActive }) {
                           })}
                           className={`w-2 h-2 rounded-full transition-all ${
                             index === getCurrentIndex(i, c.images)
-                              ? 'bg-[rgb(var(--accent))] w-6' 
-                              : 'bg-white/30 hover:bg-white/50'
+                              ? 'bg-[rgb(var(--accent))] w-5' 
+                              : 'bg-[rgb(var(--surface))]/30 hover:bg-[rgb(var(--surface))]/50'
                           }`}
                         />
                       ))}

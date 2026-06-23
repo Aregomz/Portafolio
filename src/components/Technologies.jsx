@@ -100,7 +100,7 @@ export function Technologies({ id, setActive }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.06 * i }}
                 viewport={{ once: true }}
-                className="flex items-center gap-3 p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all"
+                className="flex items-center gap-3 p-3 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition-all"
               >
                 <Icon className="text-xl text-[rgb(var(--accent))]" />
                 <span className="text-sm">{name}</span>

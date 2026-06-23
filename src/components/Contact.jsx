@@ -22,23 +22,23 @@ export function Contact({ id, setActive }) {
           viewport={{ once: true }}
           className="flex flex-wrap gap-4 justify-center"
         >
-          <a href="mailto:arellanes.22@icloud.com" className="flex items-center gap-3 p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
+          <a href="mailto:arellanes.22@icloud.com" className="flex items-center gap-3 p-3 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition">
             <MdEmail className="text-xl text-[rgb(var(--accent))]" />
             <span>arellanes.22@icloud.com</span>
           </a>
-          <a href="mailto:arellanesmarco@gmail.com" className="flex items-center gap-3 p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
+          <a href="mailto:arellanesmarco@gmail.com" className="flex items-center gap-3 p-3 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition">
             <MdEmail className="text-xl text-[rgb(var(--accent))]" />
             <span>arellanesmarco@gmail.com</span>
           </a>
-          <a href="tel:+529615875380" className="flex items-center gap-3 p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
+          <a href="tel:+529615875380" className="flex items-center gap-3 p-3 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition">
             <FaPhoneAlt className="text-xl text-[rgb(var(--accent))]" />
             <span>961 587 5380</span>
           </a>
-          <a href="https://github.com/Aregomz" target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
+          <a href="https://github.com/Aregomz" target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition">
             <FaGithub className="text-xl text-[rgb(var(--accent))]" />
             <span>github.com/Aregomz</span>
           </a>
-          <a href="https://www.linkedin.com/in/antonio-arellanes-gomez-19b8a5317" target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
+          <a href="https://www.linkedin.com/in/antonio-arellanes-gomez-19b8a5317" target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition">
             <FaLinkedin className="text-xl text-[rgb(var(--accent))]" />
             <span>LinkedIn</span>
           </a>

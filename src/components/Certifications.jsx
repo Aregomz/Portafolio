@@ -82,14 +82,14 @@ export function Certifications({ id, setActive }) {
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:border-[rgb(var(--accent))/50] group"
+                    className="block p-4 rounded-lg border border-[rgb(var(--surface))]/10 bg-[rgb(var(--surface))]/5 hover:bg-[rgb(var(--surface))]/10 transition-all duration-300 hover:border-[rgb(var(--accent))/50] group"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
-                        <h4 className="font-medium text-white group-hover:text-[rgb(var(--accent))] transition-colors">
+                        <h4 className="font-medium text-[rgb(var(--fg))] group-hover:text-[rgb(var(--accent))] transition-colors">
                           {cert.name}
                         </h4>
-                        <p className="text-sm text-white/60 mt-1">Ver credencial</p>
+                        <p className="text-sm text-[rgb(var(--fg))]/60 mt-1">Ver credencial</p>
                       </div>
                       <div className="text-[rgb(var(--accent))] opacity-60 group-hover:opacity-100 transition-opacity">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

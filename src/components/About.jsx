@@ -26,7 +26,7 @@ export function About({ id, setActive }) {
             Me apasiona convertir ideas en productos digitales sólidos, desde el diseño hasta el MVP, con visión de negocio y enfoque en el usuario.
           </p>
           <div className="mt-4">
-            <p className="text-white/80 text-sm">
+            <p className="text-[rgb(var(--fg))]/80 text-sm">
               • Egresado de la Universidad Politécnica en la carrera de Ingeniería de Software (2022-2025)
             </p>
           </div>

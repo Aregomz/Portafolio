@@ -7,12 +7,20 @@ html {
   scroll-behavior: smooth;
 }
 
-/* App theme */
+/* App theme — dark by default */
 :root {
-  --bg: 16 24 40; /* dark blue */
-  --fg: 228 235 245; /* light text */
-  --accent: 59 130 246; /* accent blue */
+  --bg: 16 24 40;
+  --fg: 228 235 245;
+  --accent: 59 130 246;
+  --surface: 255 255 255; /* overlays: bg-[rgb(var(--surface))]/10 */
   --radius: 0.625rem;
+}
+
+/* Light theme */
+html.light {
+  --bg: 246 248 252;
+  --fg: 15 23 42;
+  --surface: 0 0 0;
 }
 
 body {
@@ -33,6 +41,11 @@ body {
 
 .subheading {
   @apply text-[rgb(var(--fg))]/70;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 @theme inline {

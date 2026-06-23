@@ -3,7 +3,7 @@ import { motion as Motion, useInView } from 'framer-motion'
 
 const roles = [
   {
-    company: 'MeServices – Fullstack Developer & Líder de Proyectos',
+    company: 'MeServices TI Monterrey – Fullstack Developer & Líder de Proyectos',
     period: 'Agosto 2025 – Actualidad',
     stages: [
       {
@@ -76,13 +76,13 @@ export function Experience({ id, setActive }) {
                 )}
                 <h3 className="font-semibold">{r.company}</h3>
               </div>
-              <p className="text-sm text-white/70 ml-2">{r.period}</p>
+              <p className="text-sm text-[rgb(var(--fg))]/70 ml-2">{r.period}</p>
               {r.stages ? (
                 <div className="mt-3 ml-2 space-y-4">
                   {r.stages.map((stage) => (
                     <div key={stage.label}>
                       <p className="text-sm font-medium text-[rgb(var(--accent))]">{stage.label}</p>
-                      <p className="text-xs text-white/50 mb-1">{stage.period}</p>
+                      <p className="text-xs text-[rgb(var(--fg))]/50 mb-1">{stage.period}</p>
                       <ul className="list-disc pl-5 subheading">
                         {stage.bullets.map((b) => (
                           <li key={b}>{b}</li>
