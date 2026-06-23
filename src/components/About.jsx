@@ -21,9 +21,9 @@ export function About({ id, setActive }) {
         >
           <h2 className="heading">Acerca de mí</h2>
           <p className="mt-4 subheading">
-            Soy Ingeniero de Software con especialización en desarrollo frontend y UX/UI, creando interfaces responsivas e intuitivas con React, Tailwind CSS, Kotlin y Flutter.
-            También tengo experiencia en backend y APIs RESTful con Node.js, integrando bases de datos y aplicando arquitecturas modernas (MVC, MVVM).
-            Me apasiona transformar ideas en productos digitales usables y atractivos, desde el diseño hasta la implementación de un MVP validable en el mercado.
+            Soy Ingeniero de Software Fullstack con experiencia en desarrollo frontend y backend, diseño UX/UI, liderazgo de proyectos y arquitectura de software. Construyo soluciones digitales completas: desde interfaces responsivas e intuitivas con React, Tailwind CSS, Kotlin y Flutter, hasta APIs RESTful y bases de datos con Node.js, aplicando arquitecturas modernas como MVC y MVVM.
+            Como Scrum Master Jr. y Líder de Proyectos, coordino equipos ágiles, facilito ceremonias Scrum y aseguro la entrega de valor en cada sprint. En el rol de Arquitecto de Software, diseño la estructura técnica de sistemas escalables, tomando decisiones clave sobre tecnologías, patrones y estándares de desarrollo.
+            Me apasiona convertir ideas en productos digitales sólidos, desde el diseño hasta el MVP, con visión de negocio y enfoque en el usuario.
           </p>
           <div className="mt-4">
             <p className="text-white/80 text-sm">

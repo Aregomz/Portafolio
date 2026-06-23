@@ -5,27 +5,25 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 export function Projects({ id, setActive }) {
   const ref = useRef(null)
   const inView = useInView(ref, { margin: '-30% 0px -60% 0px', amount: 0.3 })
-  const [currentImageIndexes, setCurrentImageIndexes] = useState([0, 0, 0]) // Estado separado para cada proyecto
+  const [currentImageIndexes, setCurrentImageIndexes] = useState([0, 0, 0, 0])
 
   useEffect(() => {
     if (inView) setActive(id)
   }, [inView, id, setActive])
 
-  // Auto-play del carrusel para cada proyecto
   useEffect(() => {
-    const intervals = [
+    const counts = [4, 5, 5, 2]
+    const delays = [3000, 3500, 3200, 4000]
+    const intervals = counts.map((count, i) =>
       setInterval(() => {
-        setCurrentImageIndexes(prev => [(prev[0] + 1) % 5, prev[1], prev[2]]); // 5 imágenes para RunInsight
-      }, 3000),
-      setInterval(() => {
-        setCurrentImageIndexes(prev => [prev[0], (prev[1] + 1) % 5, prev[2]]); // 5 imágenes para VecindApp
-      }, 3500),
-      setInterval(() => {
-        setCurrentImageIndexes(prev => [prev[0], prev[1], (prev[2] + 1) % 2]); // 2 imágenes para Laboratorios School
-      }, 4000)
-    ];
-
-    return () => intervals.forEach(interval => clearInterval(interval));
+        setCurrentImageIndexes(prev => {
+          const next = [...prev]
+          next[i] = (next[i] + 1) % count
+          return next
+        })
+      }, delays[i])
+    )
+    return () => intervals.forEach(clearInterval)
   }, []);
 
   const nextImage = (projectIndex, images) => {
@@ -51,6 +49,18 @@ export function Projects({ id, setActive }) {
 
   const cards = [
     {
+      title: 'Peerdo',
+      desc: 'Plataforma que conecta a estudiantes apasionados por el aprendizaje con quienes necesitan apoyo académico, creando una comunidad de conocimiento colaborativo.',
+      contribution: 'Peerdo nace de la idea de democratizar el acceso al conocimiento entre estudiantes. La plataforma integra Inteligencia Artificial para transformar guías en PDF en rutas de aprendizaje interactivas con juegos y retos, haciendo el estudio más dinámico y efectivo. Además, los estudiantes pueden monetizar su conocimiento vendiendo sus propias guías dentro de la plataforma, generando un ecosistema donde aprender y enseñar tienen valor real.',
+      awards: [
+        '🥇 1er lugar – Expo ANFECA',
+        '🥇 1er lugar – FACPYA Pitch (Universidad Autónoma de Nuevo León)',
+        '🥇 1er lugar Estatal – Feria de Emprendimiento 2026 (Nayarit)',
+      ],
+      tech: ['Flutter', 'TypeScript', 'Microservicios', 'IA', 'Gamificación'],
+      images: ['/peerdo1.jpeg', '/peerdo2.jpeg', '/peerdo3.jpeg', '/peerdo4.jpeg'],
+    },
+    {
       title: 'RunInsight',
       desc: 'App móvil para corredores, incluyendo análisis de entrenamientos, ranking y recomendaciones personalizadas.',
       contribution: 'Tareas del proyecto: Encargado de la maquetación UI/UX y definición de la experiencia de usuario, tomando decisiones arquitectónicas clave para garantizar la escalabilidad y mantenibilidad del sistema. Definí y prioricé los features principales del producto, desarrollé la aplicación móvil utilizando Dart (Flutter) bajo los principios de Arquitectura Limpia, asegurando una base sólida y escalable. Además, realicé la integración completa de las rutas con las APIs backend.',
@@ -75,7 +85,7 @@ export function Projects({ id, setActive }) {
 
   return (
     <section id={id} ref={ref} className="section">
-      <h2 className="heading">Proyectos</h2>
+      <h2 className="heading">Casos de Éxito</h2>
       <div className="mt-8 space-y-8">
         {cards.map((c, i) => (
           <Motion.div
@@ -92,6 +102,14 @@ export function Projects({ id, setActive }) {
               <p className="text-sm subheading">{c.desc}</p>
               <p className="text-sm text-[rgb(var(--fg))]/80 italic">{c.contribution}</p>
               
+              {c.awards && (
+                <div className="space-y-1">
+                  {c.awards.map((a) => (
+                    <p key={a} className="text-sm font-medium text-yellow-400">{a}</p>
+                  ))}
+                </div>
+              )}
+
               <div className="flex flex-wrap gap-2">
                 {c.tech.map((t) => (
                   <span key={t} className="text-xs px-2 py-1 rounded bg-white/10 border border-white/10">
@@ -130,7 +148,7 @@ export function Projects({ id, setActive }) {
                         />
                         
                         {/* Segunda imagen (solo para proyectos con múltiples imágenes) */}
-                        {c.title !== 'Laboratorios School' && c.images.length > 1 && c.images[getCurrentIndex(i, c.images) + 1] && (
+                        {c.title !== 'Laboratorios School' && c.title !== 'Peerdo' && c.images.length > 1 && c.images[getCurrentIndex(i, c.images) + 1] && (
                           <img
                             src={c.images[getCurrentIndex(i, c.images) + 1]}
                             alt={`${c.title} - Captura ${getCurrentIndex(i, c.images) + 2}`}

@@ -15,7 +15,7 @@ function App() {
     () => [
       { id: 'hero', label: 'Inicio' },
       { id: 'about', label: 'Acerca de mí' },
-      { id: 'projects', label: 'Proyectos' },
+      { id: 'projects', label: 'Casos de Éxito' },
       { id: 'tech', label: 'Tecnologías' },
       { id: 'experience', label: 'Experiencias' },
       { id: 'certifications', label: 'Certificaciones' },

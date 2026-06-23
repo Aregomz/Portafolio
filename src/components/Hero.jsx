@@ -29,7 +29,7 @@ export function Hero({ id, setActive }) {
           viewport={{ once: true }}
           className="mt-3 text-lg sm:text-xl subheading"
         >
-          Software Engineer | Frontend Developer | UX/UI Designer
+          Software Engineer | Fullstack Developer | Scrum Master Jr. | Líder de Proyectos | Arquitecto de Software
         </Motion.p>
         <Motion.p
           initial={{ opacity: 0, y: 20 }}
