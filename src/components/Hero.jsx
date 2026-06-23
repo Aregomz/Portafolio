@@ -76,11 +76,19 @@ export function Hero({ id, setActive }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             viewport={{ once: true }}
-            className="mt-10"
+            className="mt-10 flex flex-col items-center md:items-start gap-4"
           >
             <a href="/Marco_Arellanes_CV.pdf" download>
               <ShinyButton>Descargar CV</ShinyButton>
             </a>
+            <div className="flex items-center gap-2 text-[rgb(var(--fg))]/40">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em]">Visitas</span>
+              <img
+                src="https://hits.sh/marco-arellanes-portfolio.svg?style=flat-square&color=3b82f6&labelColor=101828&label=visitas"
+                alt="visitas"
+                className="h-5"
+              />
+            </div>
           </Motion.div>
         </Motion.div>
 
