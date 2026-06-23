@@ -98,6 +98,17 @@ function App() {
         <Technologies id="tech" setActive={() => {}} />
         <Experience id="experience" setActive={() => {}} />
         <Certifications id="certifications" setActive={() => {}} />
+
+        <div className="py-10 flex justify-center">
+          <div className="flex items-center gap-3 text-[rgb(var(--fg))]/30">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em]">Visitas</span>
+            <img
+              src="https://visitor-badge.laobi.icu/badge?page_id=marco-arellanes-portfolio&left_color=%23101828&right_color=%233b82f6&left_text=visitas"
+              alt="visitas"
+              className="h-5 opacity-60"
+            />
+          </div>
+        </div>
       </main>
     </div>
   )
